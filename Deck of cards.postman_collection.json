@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "fb30997d-ec27-456d-b8e2-48c802a0fdf3",
+		"name": "Deck of cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33643733",
+		"_collection_link": "https://www.postman.com/spacecraft-specialist-7984735/workspace/deck-of-cards/collection/33643733-fb30997d-ec27-456d-b8e2-48c802a0fdf3?action=share&source=collection_link&creator=33643733"
+	},
+	"item": [
+		{
+			"name": "Shuffle the Cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/deck/new/shuffle/?deck_count=1",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"deck",
+						"new",
+						"shuffle",
+						""
+					],
+					"query": [
+						{
+							"key": "deck_count",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Draw a card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/new/draw/?count=2",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"new",
+						"draw",
+						""
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reshuffle the cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/{{deckId}}/shuffle/?remaining=true",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"{{deckId}}",
+						"shuffle",
+						""
+					],
+					"query": [
+						{
+							"key": "remaining",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A Brand New Deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/new/?okers_enabled=true",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"new",
+						""
+					],
+					"query": [
+						{
+							"key": "okers_enabled",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A Partial Deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"new",
+						"shuffle",
+						""
+					],
+					"query": [
+						{
+							"key": "cards",
+							"value": "AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding to Piles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/{{deckId}}/pile/heart/add/?cards=AS,2S",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"{{deckId}}",
+						"pile",
+						"heart",
+						"add",
+						""
+					],
+					"query": [
+						{
+							"key": "cards",
+							"value": "AS,2S"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shuffle Piles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/{{deckId}}/pile/heart/shuffle/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"{{deckId}}",
+						"pile",
+						"heart",
+						"shuffle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing Cards in Piles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/{{deckId}}/pile/heart/list/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"{{deckId}}",
+						"pile",
+						"heart",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drawing from Piles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/{{deckId}}/pile/king/draw/?cards=AS",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"{{deckId}}",
+						"pile",
+						"king",
+						"draw",
+						""
+					],
+					"query": [
+						{
+							"key": "cards",
+							"value": "AS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returning cards to the deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/api/deck/{{deckId}}/return/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"{{deckId}}",
+						"return",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Back of Card Image:",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.deckofcardsapi.com/static/img/back.png",
+					"protocol": "https",
+					"host": [
+						"www",
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"static",
+						"img",
+						"back.png"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "https://www.deckofcardsapi.com"
+		},
+		{
+			"key": "deckId",
+			"value": "chfnhm9q8lol"
+		}
+	]
+}
